@@ -11,16 +11,21 @@
       method="get"
       class="flex flex-col w-50 p-10 gap-2 items-start"
     >
-      <h1 class="text-3xl">Calculate the power of a number</h1>
+      <h1 class="text-3xl">Post a comment</h1>
       <input
         class="bg-black text-white p-2"
-        name="number"
-        placeholder="number"
+        name="power"
+        placeholder="comment"
       />
-      <input class="bg-black text-white p-2" name="power" placeholder="power" />
       <button class="bg-amber-400 font-bold px-2 py-0.5 text-2xl" type="submit">
         Submit
       </button>
+
+      <ul>
+        {% for comment in comments %}
+        <li>{{comment}}</li>
+        {% endfor %}
+      </ul>
     </form>
   </body>
 </html>
